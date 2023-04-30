@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Kaushan+Script&family=Lora&family=Montserrat:wght@300&family=Nunito:wght@600&family=Pacifico&family=Roboto+Slab&display=swap");
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url(t1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.brand {
+  margin: 10px 0px 0px 20px;
+  font-family: "Kaushan Script";
+  font-weight: bolder;
+  font-size: 40px;
+  color: white;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px white;
+}
+.brand:hover {
+  color: black;
+  transform: scale(1.2);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+form {
+  width: 300px;
+  height: auto;
+  background: white;
+  padding: 20px;
+  border: 10px solid darkgray;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 5px 5px 20px darkgray;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 20px 0px;
+}
+
+.email label,
+.password label {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  border: 2px solid darkgray;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="datetime-local"] {
+  padding: 5px 2px;
+}
+
+.show-password {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+.show-password input,
+.show-password label {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.signIn label {
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.signIn a {
+  font-weight: bolder;
+}
+.signIn a:hover {
+  color: darkgray;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 2px solid darkgray;
+  border-radius: 30px;
+  box-shadow: 2px 2px 20px darkgray;
+  color: white;
+  background: darkgray;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: white;
+  color: darkgray;
+}
+
+#errorNoUserFound {
+  color: red;
+  display: none;
+}

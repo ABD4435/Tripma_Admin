@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tripma | Admin Sign In</title>
+  <link href="styleSignIn.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="src/index.js"></script>
+  <script type="module" src="src/authSignIn.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="brand navbar-brand h1 ms-4" href="SignUp.html">Tripma</a>
+    </nav>
+  </header>
+  <section>
+    <div class="container">
+      <form id="formSignIn">
+        <div class="heading">
+          <h1>Sign In</h1>
+        </div>
+        <div class="email">
+          <label for="eMail">Email<span style="color: red; font-weight:normal;">*</span></label>
+          <input id="eMail" type="email" placeholder="Enter Email" required>
+        </div>
+        <div class="password">
+          <label for="passwordField">Password<span style="color: red; font-weight:normal;">*</span></label>
+          <input id="passwordField" type="password" placeholder="Enter Password" autocomplete="on" required>
+        </div>
+        <span id="errorNoUserFound">Invalid Credentials!</span>
+        <div class="show-password">
+          <input id="showPassword" type="checkbox">
+          <label for="showPassword">Show Password</label>
+        </div>
+        <!-- <div class="signIn">
+          <label>Not a User? <a href="SignUp.html">SignUp</a></label>
+        </div> -->
+        <div class="btn">
+          <button class="submit-btn" type="submit">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="scriptSignIn.js"></script>
+</body>
+
+</html>

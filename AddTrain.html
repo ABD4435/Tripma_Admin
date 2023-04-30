@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tripma | Admin Panel</title>
+  <link href="styleAddTrain.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="src/authSignOut.js"></script>
+  <script type="module" src="src/addTrain.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="brand" href="">Tripma</a>
+      <div class="nav-btn">
+        <div class="btns">
+          <button class="updateBtn" onclick="window.location.href='UpdateTrain.html'">Update</button>
+          <button class="deleteBtn" onclick="window.location.href='DeleteTrain.html'">Delete</button>
+        </div>
+        <button class="signOut" id="signout">Signout</button>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="container">
+      <form id="addTrainForm">
+        <div class="heading">
+          <h1>Add Train</h1>
+        </div>
+        <div class="name-number">
+          <div class="number">
+            <label for="train-number">Train Number</label>
+            <input id="train-number" name="trainNumber" type="text" placeholder="Enter Train Number" required>
+            <span id="errorNumOnly">Invalid</span>
+          </div>
+
+          <div class="name">
+            <label for="train-name">Train Name</label>
+            <input id="train-name" name="trainName" type="text" placeholder="Enter Train Number" required>
+            <span id="errorLetterOnly">Invalid</span>
+          </div>
+        </div>
+        <div class="source-destination">
+          <div class="source">
+            <label for="source">Source</label>
+            <input id="source" name="sourceStation" type="text" placeholder="Enter Source" autocomplete="on"
+              list="source-stations" required>
+            <datalist id="source-stations">
+              <option value="Mumbai-CSMT">
+              <option value="Dadar-DR">
+              <option value="Thane-TNA">
+              <option value="Diva-DIVA">
+              <option value="Panvel-PNVL">
+              <option value="Dativali-DTVL">
+              <option value="Nilaje-NILJ">
+              <option value="Taloja Panchand-TPND">
+              <option value="Navade Road-NVRD">
+              <option value="kalamboli-KLMG">
+              <option value="Somtane-SMNE">
+              <option value="Rasayani-RSYI">
+              <option value="Apta-APTA">
+              <option value="Jite-JITE">
+              <option value="Hamarapur-HMRR">
+              <option value="Pen-PEN">
+              <option value="Nagothane-NGTN">
+              <option value="Nidi-NIDI">
+              <option value="Roha-ROHA">
+              <option value="Kolad-KOL">
+              <option value="Indapur-INP">
+              <option value="Mangaon-MNI">
+              <option value="Goregaon Road-GNO">
+              <option value="Veer-VEER">
+              <option value="Sape Wamne-SAPE">
+              <option value="Karanjadi-KFD">
+              <option value="Vinhere-VINH">
+              <option value="Diwankhavati-DWV">
+              <option value="Khed-KHED">
+              <option value="Anjani-ANO">
+              <option value="Chiplun-CHI">
+              <option value="Kamathe-KMAH">
+              <option value="Savarda-SVX">
+              <option value="Aravali Road-AVRD">
+              <option value="Sangmeshwar-SGR">
+              <option value="Ukshi-UKC">
+              <option value="Bhoke-BOKE">
+              <option value="Ratanagiri-RN">
+            </datalist>
+            <span id="errorSource">Invalid</span>
+          </div>
+          <div class="destination">
+            <label for="destination">Destination</label>
+            <input id="destination" name="destinationStation" type="text" placeholder="Enter Destination"
+              autocomplete="on" list="destination-stations" required>
+            <datalist id="destination-stations">
+              <option value="Mumbai-CSMT">
+              <option value="Dadar-DR">
+              <option value="Thane-TNA">
+              <option value="Diva-DIVA">
+              <option value="Panvel-PNVL">
+              <option value="Dativali-DTVL">
+              <option value="Nilaje-NILJ">
+              <option value="Taloja Panchand-TPND">
+              <option value="Navade Road-NVRD">
+              <option value="kalamboli-KLMG">
+              <option value="Somtane-SMNE">
+              <option value="Rasayani-RSYI">
+              <option value="Apta-APTA">
+              <option value="Jite-JITE">
+              <option value="Hamarapur-HMRR">
+              <option value="Pen-PEN">
+              <option value="Nagothane-NGTN">
+              <option value="Nidi-NIDI">
+              <option value="Roha-ROHA">
+              <option value="Kolad-KOL">
+              <option value="Indapur-INP">
+              <option value="Mangaon-MNI">
+              <option value="Goregaon Road-GNO">
+              <option value="Veer-VEER">
+              <option value="Sape Wamne-SAPE">
+              <option value="Karanjadi-KFD">
+              <option value="Vinhere-VINH">
+              <option value="Diwankhavati-DWV">
+              <option value="Khed-KHED">
+              <option value="Anjani-ANO">
+              <option value="Chiplun-CHI">
+              <option value="Kamathe-KMAH">
+              <option value="Savarda-SVX">
+              <option value="Aravali Road-AVRD">
+              <option value="Sangmeshwar-SGR">
+              <option value="Ukshi-UKC">
+              <option value="Bhoke-BOKE">
+              <option value="Ratanagiri-RN">
+            </datalist>
+            <span id="errorDestination">Invalid</span>
+          </div>
+        </div>
+        <span id="errorSourceDestination">Source and Destination must not be same!</span>
+        <div class="departure-arrival">
+          <div class="departure">
+            <label for="departure-time">Departure</label>
+            <input id="departure-time" name="departureTime" type="datetime-local" required>
+          </div>
+          <div class="arrival">
+            <label for="arrival-time">Arrival</label>
+            <input id="arrival-time" name="arrivalTime" type="datetime-local" required>
+          </div>
+        </div>
+        <span id="errorDepartureArrival">Departure and Arrival time must not be same!</span>
+        <div class="btn">
+          <button class="submit-btn" type="submit" id="addTrainBtn">Add Train</button>
+        </div>
+    </div>
+    </form>
+    </div>
+  </section>
+  <script src="scriptAddTrain.js"></script>
+</body>
+
+</html>
